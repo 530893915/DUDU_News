@@ -1,1 +1,13 @@
-<view></view>
+<view class="newsType-wrapper">
+  <view class='newsType'>国内</view>
+  <view class='newsType'>国际</view>
+  <view class='newsType'>财经</view>
+  <view class='newsType'>娱乐</view>
+  <view class='newsType'>军事</view>
+  <view class='newsType'>体育</view>
+  <view class='newsType'>其他</view>
+</view>
+
+<view class='list-wrapper'>
+
+</view>

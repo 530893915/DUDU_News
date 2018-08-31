@@ -4,7 +4,7 @@
   ],
   "window":{
     "backgroundTextStyle":"dark",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#636363",
     "navigationBarTitleText": "DUDU新闻",
     "navigationBarTextStyle":"black"
   }
