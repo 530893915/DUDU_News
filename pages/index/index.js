@@ -25,6 +25,14 @@ Page({
       wx.stopPullDownRefresh()
     })
   },
+  // 点击新闻类别
+  onTapNewsType(){
+    this.setData({
+      type:'gn'
+    })
+    this.getNewsList()
+  },
+
   // 获取指定新闻类别的列表
   getNewsList(callback){
     wx.request({
