@@ -1,13 +1,19 @@
-<view class="newsType-wrapper">
-  <view class='newsType'>国内</view>
-  <view class='newsType'>国际</view>
-  <view class='newsType'>财经</view>
-  <view class='newsType'>娱乐</view>
-  <view class='newsType'>军事</view>
-  <view class='newsType'>体育</view>
-  <view class='newsType'>其他</view>
+<image class='page-bg' src='../../images/background.jpg'></image>
+<!-- 新闻类别 -->
+<view class="Type-wrapper">
+  <view class='news-type' wx:for="{{newsType}}">{{item}}</view>
 </view>
 
-<view class='list-wrapper'>
-
-</view>
+<!-- 新闻列表 -->
+<scroll-view scroll-y>
+  <view class='list-wrapper' wx:for="{{newsList}}">
+    <view class="left-wrapper">
+      <view class="new-title">哈哈哈哈哈哈这里是新闻标题哈哈哈哈242354354352</view>
+      <view class="left-bottom-wrapper">
+        <view class="new-source">人民日报</view>
+        <view class="new-date">04:09</view>
+      </view>
+    </view>
+    <image class="new-image" src="http://img1.gtimg.com/news/pics/hv1/38/85/1076/69988613.jpg"></image>
+  </view>
+</scroll-view>

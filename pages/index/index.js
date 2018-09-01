@@ -12,7 +12,18 @@ const typeMap = {
 
 Page({
   data: {
+    newsType:['国内','国际','财经','娱乐','军事','体育','其他'],
+    newsList:[0,1,2,3,4,5,6,7,8]
   },
   onLoad() {
+    // wx.request({
+    //   url: 'https://test-miniprogram.com/api/news/list',
+    //   data: {
+        
+    //   },
+    //   success: res => {
+        
+    //   }
+    // })
   } 
 })
