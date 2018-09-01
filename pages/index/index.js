@@ -8,14 +8,26 @@ const typeMap = {
   'other':'其他'
 }
 
+// const typeMap2 = {
+//   '国内':'gn',
+//   '国际':'gj',
+//   '财经':'cj',
+//   '娱乐':'yl',
+//   '军事':'js',
+//   '体育':'ty',
+//   '其他':'other'
+// }
+
+
 
 
 Page({
   data: {
     newsType:['国内','国际','财经','娱乐','军事','体育','其他'],
+    // newsType: ['gn', 'gj', 'cj', 'yl', 'js', 'ty', 'other'],
     newsList:'',
     newsDate:[],
-    type:'gj'
+    type:'gn'
   },
   onLoad() {
     this.getNewsList()
@@ -25,13 +37,55 @@ Page({
       wx.stopPullDownRefresh()
     })
   },
+
+
+
   // 点击新闻类别
-  onTapNewsType(){
+  onTapNewsType0(){
     this.setData({
       type:'gn'
     })
     this.getNewsList()
   },
+  onTapNewsType1() {
+    this.setData({
+      type: 'gj'
+    })
+    this.getNewsList()
+  },
+  onTapNewsType2() {
+    this.setData({
+      type: 'cj'
+    })
+    this.getNewsList()
+  },
+  onTapNewsType3() {
+    this.setData({
+      type: 'yl'
+    })
+    this.getNewsList()
+  },
+  onTapNewsType4() {
+    this.setData({
+      type: 'js'
+    })
+    this.getNewsList()
+  },
+  onTapNewsType5() {
+    this.setData({
+      type: 'ty'
+    })
+    this.getNewsList()
+  },
+  onTapNewsType6() {
+    this.setData({
+      type: 'other'
+    })
+    this.getNewsList()
+  },
+
+
+
 
   // 获取指定新闻类别的列表
   getNewsList(callback){
@@ -44,7 +98,8 @@ Page({
         let result = res.data.result
         console.log(res)
         let realResult = []
-        for (let i = 0; i < 9; i++) {
+        let j = result.length
+        for (let i = 0; i < j; i++) {
           realResult.push({
             id: result[i].id,
             title: result[i].title,
