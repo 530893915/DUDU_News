@@ -84,7 +84,21 @@ opacity: 0.35;
   position: absolute;
   margin: 0 15rpx;
   color: white;
+  font-weight: bold;
+  width:650rpx;
+  opacity: none;
   z-index: 1;
+}
+
+.list-wrapper:first-child .left-wrapper .new-title{
+  opacity: none;
+  text-shadow: black 0 0 10rpx;
+}
+
+.list-wrapper:first-child .left-bottom-wrapper{
+  opacity: none;
+  color: white;
+  text-shadow: black 0 0 10rpx;
 }
 
 .list-wrapper:first-child .new-image{
