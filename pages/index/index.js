@@ -1,3 +1,4 @@
+// 常量，转换type
 const typeMap = {
   '国内':'gn',
   '国际':'gj',
@@ -7,10 +8,6 @@ const typeMap = {
   '体育':'ty',
   '其他':'other'
 }
-
-
-
-
 Page({
   data: {
     newsType:['国内','国际','财经','娱乐','军事','体育','其他'],
@@ -21,14 +18,12 @@ Page({
   onLoad() {
     this.getNewsList()
   },
+  // 下拉刷新
   onPullDownRefresh(){
     this.getNewsList(() => {
       wx.stopPullDownRefresh()
     })
   },
-
-
-
   // 点击新闻类别
   onTapNewsType(e){
     let type = e.currentTarget.dataset.value
@@ -37,17 +32,13 @@ Page({
     })
     this.getNewsList()
   },
-  
-
-  // 点击新闻
+  // 点击新闻，转到新闻详情页
   onTapNewList(e){
     let id = e.currentTarget.dataset.value
     wx.navigateTo({
       url: '/pages/detail/detail?id=' + id,
     })
   },
-
-
   // 获取指定新闻类别的列表
   getNewsList(callback){
     wx.request({
@@ -60,6 +51,7 @@ Page({
         console.log(res)
         let realResult = []
         let j = result.length
+        // date格式化
         for (let i = 0; i < j; i++) {
           realResult.push({
             id: result[i].id,
@@ -68,6 +60,7 @@ Page({
             source: result[i].source,
             firstImage: result[i].firstImage
           })
+          // 如果source为空，则默认为"DUDU新闻"
           if (realResult[i].source === "") {
             realResult[i].source = "DUDU新闻"
           }
@@ -78,10 +71,8 @@ Page({
       },
       // 用回调函数来判断是否停止下拉刷新
       complete: () => {
-
         // 当callback不为空的时候，执行callback函数
         callback && callback()
-
       }
     })
   }

@@ -3,7 +3,6 @@
 <view class="Type-wrapper">
   <view class='news-type' wx:for="{{newsType}}" bindtap="onTapNewsType" data-value="{{item}}">{{item}}</view>
 </view>
-
 <!-- 新闻列表 -->
 <scroll-view scroll-y>
   <view class='list-wrapper' wx:for="{{newsList}}" data-value="{{item.id}}" bindtap='onTapNewList'>
