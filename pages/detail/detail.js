@@ -9,7 +9,10 @@ Page({
     firstImage:'',
     content:''
   },
-  onLoad(){
+  onLoad(options){
+    this.setData({
+      id: options.id
+    })
     this.getDetail()
   },
   onPullDownRefresh() {

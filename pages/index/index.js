@@ -84,7 +84,13 @@ Page({
     this.getNewsList()
   },
 
-
+  // 点击新闻
+  onTapNewList(e){
+    let id = e.currentTarget.dataset.value
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + id,
+    })
+  },
 
 
   // 获取指定新闻类别的列表

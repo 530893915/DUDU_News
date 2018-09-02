@@ -6,7 +6,7 @@
 
 <!-- 新闻列表 -->
 <scroll-view scroll-y>
-  <view class='list-wrapper' wx:for="{{newsList}}" bindtap='onTapNewList'>
+  <view class='list-wrapper' wx:for="{{newsList}}" data-value="{{item.id}}" bindtap='onTapNewList'>
     <view class="left-wrapper">
       <view class="new-title">{{item.title}}</view>
       <view class="left-bottom-wrapper">
