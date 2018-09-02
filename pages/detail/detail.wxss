@@ -1,5 +1,17 @@
+.page-bg{ 
+overflow:hidden; 
+position:fixed; 
+margin: 0px; 
+/*下面的是关键的设置100%显示*/ 
+background-size: 100% 100%; 
+width: 100%;
+height: 100%;
+z-index: -99;
+opacity: 0.35;
+} 
+
 .top-wrapper{
-  margin: 40rpx 40rpx;
+  padding: 40rpx 40rpx;
   height: 200rpx;
 }
 
@@ -31,5 +43,5 @@
 }
 
 .detail-wrapper{
-  
+
 }

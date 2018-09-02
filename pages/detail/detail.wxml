@@ -1,11 +1,12 @@
+<image class='page-bg' src='../../images/background.jpg'></image>
 <view class="top-wrapper">
-  <view class="top-title">清明假期长三角铁路客流堪比春运 上海局增开客车124列</view>
+  <view class="top-title">{{title}}</view>
   <view class="top-bottom-wrapper">
-    <view class="top-source">DUDU新闻</view>
-    <view class="top-date">2018-04-07 14:23</view>
-    <view class="top-readCount">阅读：1043</view>
+    <view class="top-source">{{source}}</view>
+    <view class="top-date">{{date}}</view>
+    <view class="top-readCount">阅读：{{readCount}}</view>
   </view>
 </view>
 <view class="detail-wrapper">
-  
+
 </view>
