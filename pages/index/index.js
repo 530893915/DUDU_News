@@ -8,15 +8,15 @@ const typeMap = {
   'other':'其他'
 }
 
-// const typeMap2 = {
-//   '国内':'gn',
-//   '国际':'gj',
-//   '财经':'cj',
-//   '娱乐':'yl',
-//   '军事':'js',
-//   '体育':'ty',
-//   '其他':'other'
-// }
+const typeMap2 = {
+  '国内':'gn',
+  '国际':'gj',
+  '财经':'cj',
+  '娱乐':'yl',
+  '军事':'js',
+  '体育':'ty',
+  '其他':'other'
+}
 
 
 
@@ -41,48 +41,14 @@ Page({
 
 
   // 点击新闻类别
-  onTapNewsType0(){
+  onTapNewsType(e){
+    let type = e.currentTarget.dataset.value
     this.setData({
-      type:'gn'
+      type:typeMap2[type]
     })
     this.getNewsList()
   },
-  onTapNewsType1() {
-    this.setData({
-      type: 'gj'
-    })
-    this.getNewsList()
-  },
-  onTapNewsType2() {
-    this.setData({
-      type: 'cj'
-    })
-    this.getNewsList()
-  },
-  onTapNewsType3() {
-    this.setData({
-      type: 'yl'
-    })
-    this.getNewsList()
-  },
-  onTapNewsType4() {
-    this.setData({
-      type: 'js'
-    })
-    this.getNewsList()
-  },
-  onTapNewsType5() {
-    this.setData({
-      type: 'ty'
-    })
-    this.getNewsList()
-  },
-  onTapNewsType6() {
-    this.setData({
-      type: 'other'
-    })
-    this.getNewsList()
-  },
+  
 
   // 点击新闻
   onTapNewList(e){

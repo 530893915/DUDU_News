@@ -1,7 +1,7 @@
 <image class='page-bg' src='../../images/background.jpg'></image>
 <!-- 新闻类别 -->
 <view class="Type-wrapper">
-  <view class='news-type' wx:for="{{newsType}}" bindtap="onTapNewsType{{index}}">{{item}}</view>
+  <view class='news-type' wx:for="{{newsType}}" bindtap="onTapNewsType" data-value="{{item}}">{{item}}</view>
 </view>
 
 <!-- 新闻列表 -->
