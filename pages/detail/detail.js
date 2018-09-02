@@ -6,13 +6,14 @@ Page({
     date:'',
     source:'DUDU新闻',
     readCount:1125,
-    firstImage:''
+    firstImage:'',
+    content:''
   },
   onLoad(){
     this.getDetail()
   },
   onPullDownRefresh() {
-    this.getWeekWeather(() => {
+    this.getDetail(() => {
       wx.stopPullDownRefresh()
     })
   },
@@ -25,6 +26,7 @@ Page({
       success: res => {
         let result = res.data.result  
         this.getTopData(result)
+        this.getDetailData(result)
       },
       complete: () => {
         callback && callback()
@@ -46,7 +48,12 @@ Page({
       readCount: readCount
     })
   },
-  getDetailData(){
-
+  getDetailData(result){
+    let firstImage = result.firstImage
+    let content = result.content
+    this.setData({
+      firstImage: firstImage,
+      content: content
+    })
   }
 })

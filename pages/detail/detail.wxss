@@ -36,6 +36,7 @@ opacity: 0.35;
 
 .top-wrapper .top-bottom-wrapper .top-date{
   padding: 0 100rpx;
+  
 }
 
 .top-wrapper .top-bottom-wrapper .top-readCount{
@@ -44,4 +45,28 @@ opacity: 0.35;
 
 .detail-wrapper{
 
+  padding: 40rpx 40rpx;
+}
+
+.detail-wrapper .news-detail{
+  
+}
+
+.detail-wrapper .news-detail .content-strong{
+  padding: 40rpx 0;
+  opacity: 0.8;
+  font-weight: bold;
+  text-indent: 2em;
+}
+
+.detail-wrapper .news-detail .content-image{
+  padding: 40rpx 0;
+  width: 100%;
+}
+
+.detail-wrapper .news-detail .content-page{
+  text-indent:2em;
+  font-size: 25rpx;
+  line-height: 35rpx;
+  opacity: 0.8;
 }
