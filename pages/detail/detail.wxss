@@ -22,6 +22,7 @@ opacity: 0.35;
 }
 
 .top-wrapper .top-bottom-wrapper{
+  position: relative;
   display: flex;
   align-items: center;
   opacity: 0.65;
@@ -31,16 +32,18 @@ opacity: 0.35;
 }
 
 .top-wrapper .top-bottom-wrapper .top-source {
+  position: absolute;
 
 }
 
 .top-wrapper .top-bottom-wrapper .top-date{
-  padding: 0 100rpx;
-  
+  position: absolute;
+  left: 230rpx;
 }
 
 .top-wrapper .top-bottom-wrapper .top-readCount{
-  
+  position: absolute;
+  left: 530rpx;
 }
 
 .detail-wrapper{
@@ -64,6 +67,7 @@ opacity: 0.35;
 .detail-wrapper .news-detail .content-image{
   padding: 40rpx 0;
   width: 100%;
+  height: 400rpx;
 }
 
 .detail-wrapper .news-detail .content-page{

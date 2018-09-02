@@ -1,14 +1,4 @@
 const typeMap = {
-  'gn':'国内',
-  'gj':'国际',
-  'cj':'财经',
-  'yl':'娱乐',
-  'js':'军事',
-  'ty':'体育',
-  'other':'其他'
-}
-
-const typeMap2 = {
   '国内':'gn',
   '国际':'gj',
   '财经':'cj',
@@ -24,7 +14,6 @@ const typeMap2 = {
 Page({
   data: {
     newsType:['国内','国际','财经','娱乐','军事','体育','其他'],
-    // newsType: ['gn', 'gj', 'cj', 'yl', 'js', 'ty', 'other'],
     newsList:'',
     newsDate:[],
     type:'gn'
@@ -44,7 +33,7 @@ Page({
   onTapNewsType(e){
     let type = e.currentTarget.dataset.value
     this.setData({
-      type:typeMap2[type]
+      type:typeMap[type]
     })
     this.getNewsList()
   },

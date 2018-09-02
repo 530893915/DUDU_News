@@ -89,6 +89,7 @@ opacity: 0.35;
   position: absolute;
   margin: 0 15rpx;
   color: white;
+  padding-top: 180rpx;
   font-weight: bold;
   width:650rpx;
   opacity: none;
