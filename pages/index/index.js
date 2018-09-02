@@ -48,7 +48,7 @@ Page({
       },
       success: res => {
         let result = res.data.result
-        console.log(res)
+        // console.log(res)
         let realResult = []
         let j = result.length
         // date格式化
@@ -57,13 +57,14 @@ Page({
             id: result[i].id,
             title: result[i].title,
             date: result[i].date.slice(0, 10) + " " + result[i].date.slice(11, 16),
-            source: result[i].source,
-            firstImage: result[i].firstImage
+            // 设置默认值
+            source: result[i].source || "DUDU新闻",
+            firstImage: result[i].firstImage || "/images/default_image.jpg"
           })
           // 如果source为空，则默认为"DUDU新闻"
-          if (realResult[i].source === "") {
-            realResult[i].source = "DUDU新闻"
-          }
+        //   if (realResult[i].source === "") {
+        //     realResult[i].source = "DUDU新闻"
+        //   }
         }
         this.setData({
           newsList: realResult

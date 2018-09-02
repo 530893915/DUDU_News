@@ -14,14 +14,8 @@ Page({
     })
     this.getDetail()
   },
-  // 下拉刷新
-  onPullDownRefresh() {
-    this.getDetail(() => {
-      wx.stopPullDownRefresh()
-    })
-  },
   // 获取对应新闻的详情内容
-  getDetail(callback){
+  getDetail(){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail', 
       data: {
@@ -31,9 +25,6 @@ Page({
         let result = res.data.result  
         this.getTopData(result)
         this.getDetailData(result)
-      },
-      complete: () => {
-        callback && callback()
       }
     })
   },
@@ -44,13 +35,13 @@ Page({
     let source = result.source
     let readCount = result.readCount
     // 如果来源为空，默认"DUDU新闻"
-    if(source == ''){
-      source = 'DUDU新闻'
-    }
+    // if(source == ''){
+    //   source = 'DUDU新闻'
+    // }
     this.setData({
       title: title,
       date: date.slice(0, 10) + " " + date.slice(11, 16),
-      source: source,
+      source: source || "DUDU新闻",
       readCount: readCount
     })
   },
@@ -59,7 +50,7 @@ Page({
     let firstImage = result.firstImage
     let content = result.content
     this.setData({
-      firstImage: firstImage,
+      firstImage: firstImage || "/images/default_image.jpg",
       content: content
     })
   }

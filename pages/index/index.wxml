@@ -1,11 +1,11 @@
 <image class='page-bg' src='../../images/background.jpg'></image>
 <!-- 新闻类别 -->
 <view class="Type-wrapper">
-  <view class='news-type' wx:for="{{newsType}}" bindtap="onTapNewsType" data-value="{{item}}">{{item}}</view>
+  <view class='news-type' wx:for="{{newsType}}" wx:key="*this" bindtap="onTapNewsType" data-value="{{item}}">{{item}}</view>
 </view>
 <!-- 新闻列表 -->
 <scroll-view scroll-y>
-  <view class='list-wrapper' wx:for="{{newsList}}" data-value="{{item.id}}" bindtap='onTapNewList'>
+  <view class='list-wrapper' wx:for="{{newsList}}" wx:key="id" data-value="{{item.id}}" bindtap='onTapNewList'>
     <view class="left-wrapper">
       <view class="new-title">{{item.title}}</view>
       <view class="left-bottom-wrapper">

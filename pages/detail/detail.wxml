@@ -8,7 +8,7 @@
   </view>
 </view>
 <view class="detail-wrapper">
-  <view wx:for="{{content}}" class="news-detail">
+  <view wx:for="{{content}}" wx:key="id" class="news-detail">
     <view wx:if="{{item.type=='strong'}}" class='content-strong'>{{item.text}}</view>
     <image wx:if="{{item.type=='image'}}" class='content-image' src='{{item.src}}'></image>
     <view wx:if="{{item.type=='p'}}" class='content-page'>{{item.text}}</view>
